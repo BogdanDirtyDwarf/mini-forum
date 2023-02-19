@@ -1,7 +1,4 @@
 import { render } from "react-dom";
-import "./s.scss"
+import { App } from "./App";
 
-render(
-    <div>React App</div>,
-    document.getElementById("root")
-)
+render(<App />, document.getElementById("root"));
