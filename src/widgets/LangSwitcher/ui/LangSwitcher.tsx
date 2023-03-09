@@ -10,23 +10,23 @@ interface LangSwitcherProps {
 }
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {
-    const { i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
-    const toggleLang = () => {
-      i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
-    };
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  };
 
-    const { theme } = useTheme();
+  const { theme } = useTheme();
   
-    return (
-      <>
-        <Button theme={ThemeButton.CLEAR} onClick={toggleLang}>
+  return (
+    <>
+      <Button theme={ThemeButton.CLEAR} onClick={toggleLang}>
         {theme === Theme.LIGHT ? (
-        <TranslateIcon height="32px" width="32px" fill='black' />
-      ) : (
-        <TranslateIcon height="32px" width="32px" fill="white" />
-      )}
-        </Button>
-      </>
-    );
+          <TranslateIcon height="32px" width="32px" fill='black' />
+        ) : (
+          <TranslateIcon height="32px" width="32px" fill="white" />
+        )}
+      </Button>
+    </>
+  );
 };
