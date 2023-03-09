@@ -2,5 +2,6 @@
 /build
 /node_modules
 /.vscode
+/extractedTranslations
 # System files
 .DS_STORE
