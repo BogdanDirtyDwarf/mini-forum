@@ -1,3 +1,6 @@
+# Project files
 /build
 /node_modules
 /.vscode
+# System files
+.DS_STORE
