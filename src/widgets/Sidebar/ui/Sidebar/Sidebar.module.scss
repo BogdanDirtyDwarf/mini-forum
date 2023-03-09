@@ -3,7 +3,6 @@
   width: var(--sidebar-width);
   background: var(--bg-secondary-color);
   transition: width 0.2s;
-
   position: relative;
 }
 
@@ -15,7 +14,8 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 100%;
 }
