@@ -14,10 +14,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
   };
 
   return (
-    <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed })}>
-      <button onClick={onToggle}>Toggle</button>
-      <div className={cls.switchers}>
-      </div>
+    <div
+      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed })}
+      data-testid="sidebar"
+    >
+      <button onClick={onToggle} data-testid="sidebar-toggle">
+        Toggle
+      </button>
+      <div className={cls.switchers}></div>
     </div>
   );
 };
