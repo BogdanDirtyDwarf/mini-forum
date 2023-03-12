@@ -2,9 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-	jest: true,
+    jest: true,
   },
-  extends: ["plugin:react/recommended"],
+  extends: ["plugin:react/recommended", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -20,7 +20,9 @@ module.exports = {
     indent: [2, 2],
     "react/jsx-filename-extension": [
       2,
-      { extensions: [".js", ".jsx", ".tsx"] },
+      {
+        extensions: [".js", ".jsx", ".tsx"],
+      },
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
