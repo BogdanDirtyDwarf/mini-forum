@@ -3,7 +3,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "app/providers/router";
 import { Navbar, Sidebar } from "widgets";
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 
 const App = () => {
   const { theme } = useTheme();
