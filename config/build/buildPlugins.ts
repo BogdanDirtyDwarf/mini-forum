@@ -1,7 +1,7 @@
-import { BuildOptions } from "./types/config";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
-import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { BuildOptions } from "./types/config";
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
@@ -10,7 +10,7 @@ export function buildPlugins({
   isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),
