@@ -1,10 +1,9 @@
 name: linting, testing, building
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -14,17 +13,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1.4.3
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        - name: Install yarn
+      - name: install yarn
         run: npm i yarn -g
-        - name: Install modules
+      - name: install modules
         run: yarn
-        - name: Build production project
+      - name: build production project
         run: yarn build:prod
-        - name: Lint SCSS
+      - name: linting scss
         run: yarn lint:scss
-        - name: Run unit tests
+      - name: unit testing
         run: yarn test:unit
