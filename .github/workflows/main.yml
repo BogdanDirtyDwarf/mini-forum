@@ -13,18 +13,18 @@ jobs:
         node-version: [17.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1.4.3
-      with:
-        node-version: ${{ matrix.node-version }}
-      - name: Install yarn
-      run: npm i yarn -g
-      - name: Install modules
-      run: yarn
-      - name: Build production project
-      run: yarn build:prod
-      - name: Lint SCSS
-      run: yarn lint:scss
-      - name: Run unit tests
-      run: yarn test:unit
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1.4.3
+        with:
+          node-version: ${{ matrix.node-version }}
+        - name: Install yarn
+        run: npm i yarn -g
+        - name: Install modules
+        run: yarn
+        - name: Build production project
+        run: yarn build:prod
+        - name: Lint SCSS
+        run: yarn lint:scss
+        - name: Run unit tests
+        run: yarn test:unit
