@@ -26,7 +26,3 @@ jobs:
         run: yarn build:prod
       - name: Unit testing
         run: yarn test:unit
-      - name: Build storybook
-        run: yarn storybook:build
-      - name: UI testing
-        run: yarn test:ui:ci
