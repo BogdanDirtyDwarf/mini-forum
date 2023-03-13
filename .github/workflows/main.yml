@@ -1,4 +1,4 @@
-name: linting, testing, building
+name: testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -24,7 +24,5 @@ jobs:
         run: yarn
       - name: build production project
         run: yarn build:prod
-      - name: linting scss
-        run: yarn lint:scss
       - name: unit testing
         run: yarn test:unit
