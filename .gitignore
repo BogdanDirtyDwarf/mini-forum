@@ -3,5 +3,6 @@
 /node_modules
 /.vscode
 /extractedTranslations
+/storybook-static
 # System files
 .DS_STORE

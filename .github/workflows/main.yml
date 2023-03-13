@@ -18,11 +18,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install yarn
+      - name: Install yarn
         run: npm i yarn -g
-      - name: install modules
+      - name: Install modules
         run: yarn
-      - name: build production project
+      - name: Build production project
         run: yarn build:prod
-      - name: unit testing
+      - name: Unit testing
         run: yarn test:unit
