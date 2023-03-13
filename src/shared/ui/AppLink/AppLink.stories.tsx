@@ -10,8 +10,8 @@ export default {
     backgroundColor: { control: "color" },
   },
   args: {
-      to: "/",
-      children: "Text",
+    to: "/",
+    children: "Text",
   }
 } as ComponentMeta<typeof AppLink>;
 
